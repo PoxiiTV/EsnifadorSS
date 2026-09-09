@@ -8,6 +8,7 @@
 ![Plataforma](https://img.shields.io/badge/Windows-10%20%7C%2011-a06bff?style=flat-square)
 ![Tamaño](https://img.shields.io/badge/portable-4,5%20MB-34e0a1?style=flat-square)
 ![Sin telemetría](https://img.shields.io/badge/telemetría-ninguna-ffb454?style=flat-square)
+![Licencia](https://img.shields.io/badge/licencia-PolyForm%20Noncommercial-ff6ec7?style=flat-square)
 
 **Visualizador de espacio en disco para Windows.**
 Cada rectángulo ocupa lo que ocupa en el disco, así que lo que sobra se ve de un vistazo.
@@ -154,6 +155,16 @@ src-tauri/src/
   refresca la entrada de directorio hasta que se cierra el descriptor. El
   Explorador de Windows se comporta igual.
 
+## 📜 Licencia
+
+[PolyForm Noncommercial 1.0.0](LICENSE).
+
+Puedes **usarlo, estudiarlo, modificarlo y compartirlo libremente** mientras el
+uso no sea comercial. Eso incluye uso personal, aprendizaje, proyectos de aficionado,
+centros educativos, organizaciones sin ánimo de lucro y administraciones públicas.
+
+Para uso comercial, escríbeme.
+
 <div align="center">
 
 ---
@@ -273,6 +284,16 @@ Backend tests: `cd src-tauri && cargo test`
   ones were skipped.
 - **A file held open for writing may report zero bytes:** NTFS does not refresh
   the directory entry until the handle closes. Windows Explorer behaves the same.
+
+## 📜 License
+
+[PolyForm Noncommercial 1.0.0](LICENSE).
+
+You may **use, study, modify and share it freely** as long as the use is
+noncommercial — that covers personal use, learning, hobby projects, schools,
+nonprofits and public institutions.
+
+For commercial use, get in touch.
 
 <div align="center">
 
