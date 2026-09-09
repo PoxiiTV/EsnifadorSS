@@ -5,3 +5,4 @@ deploy-hosting/
 dist/
 *.log
 Thumbs.db
+RELEASE-*.md
