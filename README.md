@@ -52,19 +52,48 @@ Busca la última versión en **[Releases](../../releases)**:
 | 🗂️ **Pestañas** | Varios discos abiertos a la vez, cada uno con su análisis |
 | ⚡ **Rápido** | ~700.000 archivos en 6 s en NVMe. Ajusta los hilos según el disco sea SSD o mecánico |
 
-## ⌨️ Uso
+## ⌨️ Cómo se usa
 
-| Acción | Cómo |
+Elige una unidad en la portada y espera a que termine. Con **tres gestos** ya te manejas:
+
+| | |
 |---|---|
-| Entrar en una carpeta | Doble clic |
-| Subir un nivel | Clic derecho en el fondo, o `Retroceso` |
-| Más / menos detalle | Rueda del ratón, o `+` / `−` |
+| 🖱️ **Doble clic** | Entrar en la carpeta. Si es un archivo, lo abre |
+| 🖱️ **Clic derecho en el fondo** | Subir un nivel |
+| 🎡 **Rueda del ratón** | Más o menos niveles de detalle |
+
+Y el resto con teclado:
+
+| Acción | Tecla |
+|---|---|
+| Subir un nivel · volver a la raíz | `Retroceso` · `Inicio` |
 | Atrás / adelante | `Alt` + `←` / `→` |
+| Más / menos detalle | `+` / `−` |
 | Volver a analizar | `F5` o `Ctrl` + `R` |
 | Ir al filtro | `Ctrl` + `F` |
 | Nueva pestaña / cerrar | `Ctrl` + `T` / `Ctrl` + `W` |
 | Papelera / borrado definitivo | `Supr` / `May` + `Supr` |
-| Ayuda de filtros | `F1` |
+| Ayuda de filtros y atajos | `F1` |
+
+## 🔮 Trucos escondidos
+
+Cosas que están ahí pero no saltan a la vista:
+
+| | |
+|---|---|
+| 🧹 **Detector de carpetas prescindibles** | Menú de vista (**◒**) → *Avanzado*. Viene apagado porque es cosa de programadores. Al encenderlo aparece una pestaña **Limpieza** con `node_modules`, cachés y temporales, ya separados entre lo que se regenera solo y lo que conviene mirar antes |
+| 🎨 **Colorear por antigüedad** | En el mismo menú. El mapa se vuelve un mapa de calor: verde lo reciente, rojo lo que lleva años sin tocarse |
+| 📁 **Ocultar los archivos** | También ahí. Deja solo la estructura de carpetas, muy útil para ver de dónde cuelga el peso |
+| 🔢 **El «N sin acceso» se pulsa** | Abajo a la derecha. Te lista exactamente qué carpetas se saltó y por qué |
+| 🖱️ **Arrastra una carpeta a la ventana** | Se analiza sola, sin pasar por ningún diálogo |
+| 🗂️ **Clic con la rueda en una pestaña** | La cierra |
+| 🔍 **Texto suelto en el filtro** | Sin comodines busca «que contenga»: escribir `factura` encuentra `Factura-2024.pdf` |
+| 🧮 **Condiciones encadenadas** | `*.log >1mb` exige las dos a la vez. Y `*.*;*.tmp` excluye lo de después del `;` |
+| ⎋ **`Esc` con el filtro enfocado** | Lo limpia de golpe |
+| ⬛ **Bloques con borde punteado** | Son carpetas que Windows no dejó leer |
+| 🔲 **El bloque «N elementos»** | Agrupa todo lo que no llegaría ni a un píxel. Sube el detalle o entra para verlo |
+| 📤 **Exportar informe** | Menú de vista. Vuelca el árbol a texto plano |
+| 🧊 **El botón ▤** | Pliega el panel lateral y le da todo el ancho al mapa |
 
 ### 🏷️ Sintaxis del filtro
 
@@ -168,19 +197,48 @@ Squarified treemap · infinite zoom · 8 themes · filter syntax · disposable-f
 detector (`node_modules`, package caches, temp files) · top-20 panels · recycle
 bin with confirmation · tabs · ~700,000 files in 6 s on NVMe.
 
-## ⌨️ Shortcuts
+## ⌨️ How to use it
 
-| Action | How |
+Pick a drive on the start screen and wait for the scan. **Three gestures** cover most of it:
+
+| | |
 |---|---|
-| Enter a folder | Double click |
-| Go up one level | Right click on the background, or `Backspace` |
-| More / less detail | Mouse wheel, or `+` / `−` |
+| 🖱️ **Double click** | Enter the folder. On a file, opens it |
+| 🖱️ **Right click on the background** | Go up one level |
+| 🎡 **Mouse wheel** | More or fewer detail levels |
+
+The rest is keyboard:
+
+| Action | Key |
+|---|---|
+| Up one level · back to root | `Backspace` · `Home` |
 | Back / forward | `Alt` + `←` / `→` |
+| More / less detail | `+` / `−` |
 | Rescan | `F5` or `Ctrl` + `R` |
 | Focus the filter | `Ctrl` + `F` |
 | New tab / close | `Ctrl` + `T` / `Ctrl` + `W` |
 | Recycle bin / permanent delete | `Del` / `Shift` + `Del` |
-| Filter help | `F1` |
+| Filter and shortcut help | `F1` |
+
+## 🔮 Hidden gems
+
+Things that are in there but don't announce themselves:
+
+| | |
+|---|---|
+| 🧹 **Disposable-folder detector** | View menu (**◒**) → *Avanzado*. Off by default because it's a developer thing. Turning it on adds a **Limpieza** tab listing `node_modules`, caches and temp files, already split between what regenerates itself and what deserves a look first |
+| 🎨 **Colour by age** | Same menu. The map becomes a heatmap: green for recent, red for what hasn't been touched in years |
+| 📁 **Hide files** | Also there. Leaves only the folder structure, handy for seeing where the weight hangs from |
+| 🔢 **The "N sin acceso" counter is clickable** | Bottom right. Lists exactly which folders were skipped and why |
+| 🖱️ **Drag a folder onto the window** | It scans straight away, no dialog |
+| 🗂️ **Middle click on a tab** | Closes it |
+| 🔍 **Plain text in the filter** | With no wildcards it means "contains": typing `invoice` finds `Invoice-2024.pdf` |
+| 🧮 **Chained conditions** | `*.log >1mb` requires both. And `*.*;*.tmp` excludes whatever follows the `;` |
+| ⎋ **`Esc` while the filter has focus** | Clears it instantly |
+| ⬛ **Blocks with a dotted border** | Folders Windows refused to read |
+| 🔲 **The "N elementos" block** | Groups everything too small to reach a pixel. Raise the detail or step inside to see it |
+| 📤 **Export report** | View menu. Dumps the tree to plain text |
+| 🧊 **The ▤ button** | Folds the side panel away and gives the map the full width |
 
 Filter syntax matches the Spanish section above; attribute keywords also accept
 English names (`:hidden`, `:system`, `:readonly`, `:encrypted`, `:temporary`,
