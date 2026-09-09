@@ -1,0 +1,119 @@
+<meta charset="utf-8" />
+<title>EsnifadorSS</title>
+<link rel="stylesheet" href="css/app.css" />
+
+<div class="app">
+  <header class="titlebar" data-tauri-drag-region>
+    <div class="brand" data-tauri-drag-region>
+      <img class="mark" src="logo.png" alt="" />
+      EsnifadorSS <small>v0.1.0</small>
+    </div>
+    <nav class="tabs" id="tabs" aria-label="Análisis abiertos"></nav>
+    <button class="tab-add" id="tab-add" title="Nuevo análisis (Ctrl+T)">+</button>
+    <div class="drag" data-tauri-drag-region></div>
+    <div class="winbtns">
+      <button class="winbtn" id="win-min" title="Minimizar" aria-label="Minimizar">
+        <svg viewBox="0 0 10 10"><path d="M0 5h10" stroke="currentColor" stroke-width="1.2" /></svg>
+      </button>
+      <button class="winbtn" id="win-max" title="Maximizar" aria-label="Maximizar">
+        <svg viewBox="0 0 10 10"><rect x="0.6" y="0.6" width="8.8" height="8.8" fill="none" stroke="currentColor" stroke-width="1.2" /></svg>
+      </button>
+      <button class="winbtn close" id="win-close" title="Cerrar" aria-label="Cerrar">
+        <svg viewBox="0 0 10 10"><path d="M0 0l10 10M10 0L0 10" stroke="currentColor" stroke-width="1.2" /></svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <div class="group">
+      <button class="btn primary" id="act-scan"><span class="ico">⌖</span> Analizar</button>
+      <button class="btn" id="act-stop" title="Detener el análisis" hidden>Detener</button>
+    </div>
+
+    <div class="group">
+      <button class="btn" id="nav-back" title="Atrás (Alt+←)" disabled>←</button>
+      <button class="btn" id="nav-fwd" title="Adelante (Alt+→)" disabled>→</button>
+      <button class="btn" id="nav-up" title="Subir un nivel (Retroceso)" disabled>↑</button>
+      <button class="btn" id="nav-home" title="Volver a la raíz (Inicio)" disabled>⌂</button>
+      <button class="btn" id="act-refresh" title="Volver a analizar (F5)" disabled>⟳</button>
+    </div>
+
+    <div class="crumbs" id="crumbs"></div>
+
+    <div class="group">
+      <button class="btn" id="detail-down" title="Menos detalle (−)">−</button>
+      <button class="btn" id="detail-label" title="Niveles de anidamiento visibles" disabled>4</button>
+      <button class="btn" id="detail-up" title="Más detalle (+)">+</button>
+    </div>
+
+    <div class="filter">
+      <span class="lens">⌕</span>
+      <input id="filter" type="text" spellcheck="false" placeholder="Filtro: *.mp4|>500mb  (F1)" />
+      <span class="hits" id="filter-hits"></span>
+      <button class="clear" id="filter-clear" title="Limpiar (Esc)" hidden>✕</button>
+    </div>
+
+    <div class="group">
+      <button class="btn" id="act-view" title="Opciones de vista">◒</button>
+      <button class="btn" id="act-theme" title="Tema">◐</button>
+      <button class="btn" id="act-aside" title="Panel lateral" aria-pressed="true">▤</button>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="stage">
+      <canvas id="map"></canvas>
+      <section class="working" id="working" hidden>
+        <div class="ring"></div>
+        <h2>Analizando</h2>
+        <div class="wpath" id="work-title"></div>
+        <div class="wstats">
+          <div><b id="work-files">0</b><span>archivos</span></div>
+          <div><b id="work-dirs">0</b><span>carpetas</span></div>
+          <div><b id="work-bytes">0 B</b><span>medidos</span></div>
+        </div>
+        <div class="wbar" id="work-bar" hidden><i id="work-fill"></i></div>
+        <div class="weta" id="work-eta"></div>
+        <div class="wpath dim" id="work-path"></div>
+      </section>
+
+      <section class="launcher" id="launcher">
+        <h1>Mira qué se está <span>comiendo tu disco</span></h1>
+        <p>Elige una unidad para empezar. También puedes soltar una carpeta aquí.</p>
+        <div class="drives" id="drives"></div>
+        <div style="display: flex; justify-content: center; gap: 8px">
+          <button class="btn solid wide" id="pick-folder">Analizar una carpeta…</button>
+          <button class="btn solid wide" id="show-help">Ayuda de filtros</button>
+          <button class="btn solid wide" id="launcher-cancel" hidden>Cancelar</button>
+        </div>
+      </section>
+    </div>
+
+    <aside class="aside" id="aside">
+      <div class="tabsrow" id="aside-tabs">
+        <button data-pane="detalles" aria-selected="true">Detalles</button>
+        <button data-pane="mayores" aria-selected="false">Mayores</button>
+        <button data-pane="tipos" aria-selected="false">Tipos</button>
+        <button data-pane="prescindibles" aria-selected="false" hidden>Limpieza</button>
+      </div>
+      <div class="body" id="aside-body"></div>
+    </aside>
+  </div>
+
+  <div class="scanbar" id="scanbar" hidden><i></i></div>
+
+  <footer class="status">
+    <button class="credit" id="credit" title="github.com/PoxiiTV">
+      hecho con <span class="heart">💙</span> por <span class="who">poxi</span>
+    </button>
+    <span class="left">
+      <span id="st-main">Listo</span>
+      <span class="grow" id="st-path"></span>
+    </span>
+    <span id="st-right"></span>
+  </footer>
+</div>
+
+<div class="tip" id="tip" data-hidden="1"></div>
+
+<script type="module" src="js/main.js"></script>

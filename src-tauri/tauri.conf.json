@@ -1,0 +1,59 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "EsnifadorSS",
+  "version": "0.1.0",
+  "identifier": "com.poxi.esnifadorss",
+  "build": {
+    "frontendDist": "../src"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "windows": [
+      {
+        "title": "EsnifadorSS",
+        "width": 1360,
+        "height": 860,
+        "minWidth": 940,
+        "minHeight": 620,
+        "decorations": false,
+        "resizable": true,
+        "center": true,
+        "dragDropEnabled": true,
+        "backgroundColor": "#0a0f1e"
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": [
+      "nsis"
+    ],
+    "publisher": "Poxi",
+    "copyright": "Poxi",
+    "category": "Utility",
+    "shortDescription": "Visualizador de espacio en disco",
+    "longDescription": "EsnifadorSS analiza tus discos y muestra que ocupa cada archivo con un mapa visual interactivo.",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.ico"
+    ],
+    "windows": {
+      "nsis": {
+        "installMode": "currentUser",
+        "languages": [
+          "Spanish",
+          "English"
+        ],
+        "installerIcon": "icons/icon.ico",
+        "uninstallerIcon": "icons/icon.ico",
+        "headerImage": "installer/header.bmp",
+        "sidebarImage": "installer/sidebar.bmp"
+      }
+    }
+  }
+}
