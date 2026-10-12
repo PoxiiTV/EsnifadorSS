@@ -4,7 +4,7 @@
 
 <br />
 
-![Versión](https://img.shields.io/badge/versión-0.1.0-4fd1ff?style=flat-square)
+![Versión](https://img.shields.io/badge/versión-0.1.1-4fd1ff?style=flat-square)
 ![Plataforma](https://img.shields.io/badge/Windows-10%20%7C%2011-a06bff?style=flat-square)
 ![Tamaño](https://img.shields.io/badge/portable-4,5%20MB-34e0a1?style=flat-square)
 ![Sin telemetría](https://img.shields.io/badge/telemetría-ninguna-ffb454?style=flat-square)

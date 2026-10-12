@@ -5,6 +5,13 @@ Todas las versiones de EsnifadorSS, de la más reciente a la más antigua.
 
 ---
 
+## 🎨 v0.1.1 — Icono nuevo
+
+- **Icono nuevo** con el estilo de la familia de programas de Poxi: una E pixelada con un mini mapa de bloques de colores, el mismo que dibuja EsnifadorSS con tu disco.
+- **Nítido en cualquier tamaño**: versiones dibujadas a mano para 16, 20, 24, 32, 40, 48, 64, 128 y 256 px.
+
+---
+
 ## 🎉 v0.1.0 — 10 de septiembre de 2026
 
 **Primera versión pública.** Un visualizador de espacio en disco que dibuja cada
@@ -88,6 +95,13 @@ ni una tabla.
 ---
 
 ## 🇬🇧 English
+
+## 🎨 v0.1.1 — New icon
+
+- **New icon** in the style of the Poxi app family: a pixel-art E with a tiny map of colored blocks, just like the one EsnifadorSS draws from your disk.
+- **Sharp at every size**: hand-drawn versions for 16, 20, 24, 32, 40, 48, 64, 128 and 256 px.
+
+---
 
 ## 🎉 v0.1.0 — September 10, 2026
 
